@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- * _memset - fill a block of memory
- * @s: starting address
- * @b: value
- * @n: no of bytes
- * Return: Always 0
+ * _memset - fill a memory with a constant byte
+ * @s: memory area to fill
+ * @b: constant byte to fill
+ * @n: bytes of memory area to fill
+ *
+ * Return: the memory area filled
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	unsigned int a;
 
-	for (i = 0; n > 0; i++, n--)
+	for (a = 0; a < n; a++)
 	{
-		s[i] = b;
+		s[a] = b;
 	}
 
 	return (s);
