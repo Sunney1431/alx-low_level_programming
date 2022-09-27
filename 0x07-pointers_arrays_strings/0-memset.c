@@ -1,13 +1,17 @@
-#include "main.h"                                                                                                                   
-
-/**                                                                                                                                 
- * reset_to_98-Resets the value of a variable back to 98.                                                                           
- * @n:Variable to the reset.                                                                              
- * Return:Void
+#include "main.h"
+/**
+ * _memset - fills memory with a constant byte,
+ * @s: memory area.
+ * @b: constant byte.
+ * @n: bytes filled.
+ * Return: the pointer to dest.
  */
-                                                                                                                                    void reset_to_98(int *n)                                                                                                            
-{     
-	*n = 98;
-}	
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
 
-		                     
+	for (i = 0; i < n; i++)
+		*(s + i) =  b;
+
+	return (s);
+}
